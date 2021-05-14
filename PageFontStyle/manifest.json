@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "PageStyleExtension",
+  "version": "1.0",
+  "description": "Changes font style on a specific page",
+
+  "action": {
+    "default_icon": "icons/pokemon.png",
+    "default_popup": "popup.html",
+    "default_title": "PageFontStyle"
+  },
+
+  "permissions": [
+    "tabs"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [{
+    "matches": ["https://en.wikipedia.org/*"],
+    "js": ["content.js"],
+    "css": ["content.css"]
+  }]
+
+
+}
+

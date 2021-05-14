@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "wordnik with chrom storage",
+  "version": "1.0",
+
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+
+  "browser_action": {
+    "default_icon": "icons/kitten.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts" : [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "permissions": [
+    "storage"
+  ]
+}

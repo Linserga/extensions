@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "wordnik",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icons/kitten.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  }
+
+//  ,"host_permissions": [
+//    "https://*/"
+//  ]
+}

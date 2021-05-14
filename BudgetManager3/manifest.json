@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "budget manager 3",
+  "version": "1.0",
+  "description": "A new variant of a famous budget manager",
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/budget.png"
+  }
+
+
+}

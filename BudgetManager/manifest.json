@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Budget Manager",
+  "version": "1.0",
+
+  "icons": {
+    "18": "icons/commute18.png",
+    "36": "icons/commute36.png",
+    "48": "icons/commute48.png"
+  },
+
+  "browser_action": {
+    "default_icon": "icons/commute18.png",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "persistent": false,
+    "scripts": ["eventPage.js"]
+  },
+
+  "permissions": [
+    "storage",
+    "notifications",
+    "contextMenus"
+  ],
+
+  "options_page": "options.html"
+}
