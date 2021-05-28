@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "kitten2",
+  "version": "1.0",
+
+  "action": {
+    "default_icon": "icons/kitten.png",
+    "icon": "hello"
+
+
+  }
+
+}
