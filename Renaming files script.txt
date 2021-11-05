@@ -1,8 +1,0 @@
-PowerShell
-Get-ChildItem *.jpg | ForEach-Object{Rename-Item $_ -NewName "$(Get-Random)-$($_.Name).jpg"}
-Get-ChildItem *.jpg | ForEach-Object{Rename-Item $_ -NewName "$(Get-Random)-$($_.Name)"}
-
-Bash
-
-for f in *.jpg; do   mv "$f" "$RANDOM$f"; done
-for f in *.jpg; do   mv "$f" "$RANDOM.jpg"; done

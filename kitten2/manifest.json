@@ -1,13 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "kitten2",
-  "version": "1.0",
+  "name": "Kitten Extensions 2",
+  "version": "2.0",
 
-  "action": {
-    "default_icon": "icons/kitten.png",
-    "icon": "hello"
-
+  "browser_action": {
+    "matches": ["<all_urls"],
 
   }
-
 }

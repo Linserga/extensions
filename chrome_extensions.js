@@ -2464,6 +2464,33 @@ chrome.enterprise.reportingPrivate.ContextInfo;
  */
 chrome.enterprise.reportingPrivate.getContextInfo = function(callback) {};
 
+
+/**
+ * Possible states for the Certificate status.
+ * @enum {number}
+ */
+chrome.enterprise.reportingPrivate.CertificateStatus = {
+  OK: 0,
+  POLICY_UNSET: 1,
+};
+
+/**
+ * Type of the object returned by getCertificate.
+ * @typedef {?{
+ *   status: chrome.enterprise.reportingPrivate.CertificateStatus,
+ *   encodedCertificate: (!ArrayBuffer|undefined),
+ * }}
+ */
+chrome.enterprise.reportingPrivate.Certificate;
+
+/**
+ * Returns the certificate object.
+ * @param {!string} url URL for which certificate needs to be fetched.
+ * @param {(function(!chrome.enterprise.reportingPrivate.Certificate): void)}
+ *     callback Called back with the response.
+ */
+chrome.enterprise.reportingPrivate.getCertificate = function(url, callback) {};
+
 /**
  * @see https://developer.chrome.com/extensions/extension.html
  * @const
@@ -4111,7 +4138,7 @@ chrome.contextMenus.removeAll = function(opt_callback) {};
 
 /**
  * @interface
- * @extends {ChromeBaseEvent<function(!Object, !Tab=)>}
+ * @extends {ChromeBaseEvent<function(!OnClickData, !Tab=)>}
  * @see https://developer.chrome.com/extensions/contextMenus#event-onClicked
  */
 chrome.contextMenus.ClickedEvent = function() {};
@@ -7780,7 +7807,7 @@ CookieStore.prototype.tabIds;
 
 
 /**
- * @see https://developer.chrome.com/extensions/dev/contextMenus.html#type-OnClickData
+ * @see https://developer.chrome.com/docs/extensions/reference/contextMenus/#type-OnClickData
  * @constructor
  */
 function OnClickData() {}
